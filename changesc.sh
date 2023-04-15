@@ -42,7 +42,7 @@ echo -ne "Select menu : "; read x
 case "$x" in 
    1 | 01)
    clear
-   apt update ; apt upgrade -y ; wget vip-xdrg45.me/setup.sh ; chmod +x setup.sh ; ./setup.sh
+   apt update ; apt upgrade -y ; wget https://raw.githubusercontent.com/ghafoorali176/abc/ipuk/setup.sh ; chmod +x setup.sh ; ./setup.sh
    ;;
    
    2 | 02)

@@ -21,7 +21,7 @@ trx=$(grep -c -E "^#! " "/etc/xray/config.json")
 ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 #######PERIZINAN
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/ghafoorali176/izinvps/ipuk/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -39,7 +39,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/ghafoorali176/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -56,7 +56,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/ghafoorali176/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -74,7 +74,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/ghafoorali176/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
 fi
 
 clear
@@ -177,7 +177,7 @@ fi
 clear
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
+echo -e "\E[44;1;39m                     ⇱ INFORMATION VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "□ Sever Uptime        = $( uptime -p  | cut -d " " -f 2-10000 ) "
@@ -187,10 +187,10 @@ echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "□ Server IP           = ${IP}"
 echo -e "□ Clients Name        = $Name"
 echo -e "□ Exfire Script VPS   = $Exp"
-echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
-echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
-echo -e "□ AutoScript By Dev   = XDRG ${GREEN}( RIDWAN-DEV112 )${NC}"
-exp=$( curl -s https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep -w $IP | cut -d ' ' -f 3 )
+echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( 12 o'ckock daily)${NC}"
+echo -e "□ License Limit       = VPS ${GREEN}( Register IP VPS )${NC}"
+echo -e "□ AutoScript By Dev   = ${GREEN}( Ghafoor Ali )${NC}"
+exp=$( curl -s https://raw.githubusercontent.com/ghafoorali176/izinvps/ipuk/ip | grep -w $IP | cut -d ' ' -f 3 )
 now=`date -d "0 days" +"%Y-%m-%d"`
 expired_date=$(date -d "$exp" +%s)
 now_date=$(date -d "$now" +%s)
@@ -203,7 +203,7 @@ else
     echo ""
 fi
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
+echo -e "\E[44;1;39m                     ⇱ STATUS By Ghafoor Ali ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${status_xray} ]      [ ${GREEN}NGINX${NC} : ${status_nginx} ]"
@@ -213,7 +213,7 @@ echo -e "\033[1;93m│\033[0m ${Blue} $ssh1     $vmc       $vlx      $trx       
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ MENU LAYANAN ⇲                         \E[0m"
+echo -e "\E[44;1;39m                     ⇱ MENU By Ghafoor Ali ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e "  ${COLOR1}[01]${NC} • [${YELLOW}Menu${NC}] SSHWS     ${COLOR1}[08]${NC} • [${YELLOW}Menu${NC}] THEME     $COLOR1 $NC"
@@ -225,7 +225,7 @@ echo -e "  ${COLOR1}[06]${NC} • [${YELLOW}Menu${NC}] SET DNS   ${COLOR1}[13]${
 echo -e "  ${COLOR1}[07]${NC} • [${YELLOW}Menu${NC}] LOAD VPS  ${COLOR1}[14]${NC} • CHANGE PW VPS  $COLOR1 $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ XDRGVPN PROJECT ⇲                      \E[0m"
+echo -e "\E[44;1;39m                     ⇱ Ghafoor Ali VPN PROJECT ⇲                      \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""

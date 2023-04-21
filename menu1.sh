@@ -1,8 +1,8 @@
 #!/bin/bash
 # Menu For Script
 # Edition : Stable Edition V1.0
-# Auther  : AWALUDIN FERIYANTO
-# (C) Copyright 2021-2022 By RIDDEV
+# Auther  : Ghafoor Ali
+# (C) Copyright 2021-2023 By Ghafoor Ali
 # =========================================
 #!/bin/bash
 # // Checking Script Expired
